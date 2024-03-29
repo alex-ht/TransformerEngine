@@ -2426,7 +2426,7 @@ class DotProductAttention(torch.nn.Module):
 
         self.use_fused_attention = (
             int(os.getenv("NVTE_FUSED_ATTN", "1"))
-            and self.device_compute_capability >= (8, 0)
+            and self.device_compute_capability >= (7, 0)
         )
 
         assert (
